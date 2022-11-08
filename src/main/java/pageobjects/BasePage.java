@@ -26,7 +26,7 @@ public class BasePage {
     @FindBy(css = ".hoverl_fac0")
     protected WebElement contactUsButton;
 
-    @FindBy(css = ".product-thumbnail[xpath='1']")
+    @FindBy(css = ".product_list .row > div:nth-of-type(1)")
     protected WebElement firstProductInSearchResults;
 
 
