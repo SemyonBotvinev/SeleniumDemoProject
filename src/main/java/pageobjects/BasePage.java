@@ -17,9 +17,6 @@ public class BasePage {
     @FindBy(css = ".ui-autocomplete-input")
     protected WebElement searchField;
 
-    @FindBy(css = ".col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sp-12 col-cart col-top-menu ApColumn ")
-    protected WebElement blankSpace;
-
     @FindBy(css = ".ui-autocomplete-input ~ button")
     protected WebElement searchButton;
 

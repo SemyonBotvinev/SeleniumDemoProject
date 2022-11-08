@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageobjects.HouseAndGardenPage;
 import pageobjects.SearchResultsPage;
-import pageobjects.old.*;
 
 import java.time.Duration;
 
