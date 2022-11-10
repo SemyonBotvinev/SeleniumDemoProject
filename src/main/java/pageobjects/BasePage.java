@@ -55,9 +55,5 @@ public class BasePage {
     public void contactUsButtonClick() {
         contactUsButton.click();
     }
-
-
-
-
-
+    
 }
