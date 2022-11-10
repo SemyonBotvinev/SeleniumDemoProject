@@ -16,7 +16,7 @@ public class CucumberMethods extends CucumberRunner{
 
     @When("^I search ([^\"]*)$")
     public void iFillSearchFieldWith(String query) {
-        new HouseAndGardenPage(driver, true).search(query);
+        new HouseAndGardenPage(driver, true).putValueIntoSearchField(query);
     }
 
     @And("I click on loop button")

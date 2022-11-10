@@ -39,7 +39,7 @@ public class BaseTest {
     @Test
     void searchCheck() {
         houseAndGardenPage.go();
-        houseAndGardenPage.search("КАСТРЮЛЯ");
+        houseAndGardenPage.putValueIntoSearchField("КАСТРЮЛЯ");
         searchResultsPage.clickFirstProductInSearchResults();
     }
 

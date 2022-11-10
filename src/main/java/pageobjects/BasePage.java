@@ -38,8 +38,8 @@ public class BasePage {
         checkTitle();
     }
 
-    public void search(String searchValue) {
-        searchField.sendKeys(searchValue);
+    public void putValueIntoSearchField(String value) {
+        searchField.sendKeys(value);
         searchField.sendKeys(Keys.RETURN);
     }
 
