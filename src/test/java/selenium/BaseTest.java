@@ -41,6 +41,7 @@ public class BaseTest {
         houseAndGardenPage.go();
         houseAndGardenPage.putValueIntoSearchField("КАСТРЮЛЯ");
         searchResultsPage.clickFirstProductInSearchResults();
+
     }
 
 

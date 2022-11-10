@@ -16,6 +16,7 @@ public class HouseAndGardenPage extends BasePage {
         super.url = this.url;
         super.expectedTitle= this.expectedTitle;
 
+
     }
 
     public HouseAndGardenPage(WebDriver driver, boolean withPageFactory) {

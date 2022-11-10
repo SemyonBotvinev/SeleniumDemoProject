@@ -44,6 +44,8 @@ public class BasePage {
 
     public void sendEnterIntoSearchField() {
         searchField.sendKeys(Keys.RETURN);
+
+
     }
 
     public void clickFirstProductInSearchResults() {
