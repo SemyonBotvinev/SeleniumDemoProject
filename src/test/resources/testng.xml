@@ -2,7 +2,7 @@
 
 <suite name="SeleniumDemoProjectSuite" verbose="1" parallel="classes" thread-count="2" >
 
-    <test name="Chrome + Firefox">
+    <test name="Chrome+">
         <classes>
             <class name="selenium.ChromeTest"/>
             <class name="selenium.FirefoxTest"/>
@@ -10,3 +10,4 @@
     </test>
 
 </suite>
+

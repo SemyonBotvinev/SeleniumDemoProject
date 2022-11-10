@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class HouseAndGardenPage extends BasePage {
-    protected final String URL = "https://dom-kauf.com/ru/37-dom-i-dacha";
+    protected String URL = "https://dom-kauf.com/ru/37-dom-i-dacha";
     protected final String EXPECTED_TITLE = "✅ Купить товары для дома и дачи в Германии| Dom-kauf ❤️";
 
     public HouseAndGardenPage(WebDriver driver) {
