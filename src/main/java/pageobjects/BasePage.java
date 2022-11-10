@@ -10,8 +10,7 @@ import static org.testng.Assert.assertEquals;
 public class BasePage {
 
     protected WebDriver driver;
-
-    protected String url = "https://dom-kauf.com/ru/";
+    protected String url = "";
     protected String expectedTitle;
 
     @FindBy(css = ".ui-autocomplete-input")
@@ -53,9 +52,5 @@ public class BasePage {
     public void contactUsButtonClick() {
         contactUsButton.click();
     }
-
-
-
-
-
+    
 }
