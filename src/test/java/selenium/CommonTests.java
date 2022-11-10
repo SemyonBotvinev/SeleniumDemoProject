@@ -7,12 +7,12 @@ import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class CommonTests {
 
-    private WebDriver driver;
+    //private WebDriver driver;
     private HouseAndGardenPage houseAndGardenPage;
     private SearchResultsPage searchResultsPage;
 
     CommonTests(WebDriver driver) {
-        this.driver = driver;
+        //this.driver = driver;
         houseAndGardenPage = initElements(driver, HouseAndGardenPage.class);
         searchResultsPage = initElements(driver, SearchResultsPage.class);
     }
