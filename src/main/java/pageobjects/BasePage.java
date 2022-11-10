@@ -40,6 +40,9 @@ public class BasePage {
 
     public void putValueIntoSearchField(String value) {
         searchField.sendKeys(value);
+    }
+
+    public void sendEnterIntoSearchField() {
         searchField.sendKeys(Keys.RETURN);
     }
 
