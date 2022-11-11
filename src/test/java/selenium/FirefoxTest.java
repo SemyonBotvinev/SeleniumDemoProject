@@ -13,24 +13,17 @@ public class FirefoxTest {
     private SeleniumSettings settings = new SeleniumSettings();
     private WebDriver driver;
 
-
     @BeforeMethod
     void beforeMethod() {
         var driver = settings.useFirefox();
-
-
         this.driver = driver;
-    }
-
-    @AfterMethod
-    void afterMethod() {
-        driver.close();
     }
 
     @Test
     void run() {
         var commonTests = new CommonTests(driver);
         commonTests.searchTest();
+        driver.close();
     }
 
 

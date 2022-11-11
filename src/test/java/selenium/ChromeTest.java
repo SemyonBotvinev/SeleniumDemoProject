@@ -2,41 +2,35 @@ package selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import pageobjects.SeleniumSettings;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class ChromeTest {
+    BrowserCreator.WebdriverInterface chrome = BrowserCreator.newChromeDriver;
+        //если бы был общее поле test - мы могли бы его послать в создание лямбды, и там он уже будет
+        //залинкован к именно запущенному драйверу
 
-    private SeleniumSettings settings = new SeleniumSettings();
-    private WebDriver driver;
-    private WebDriver driver2;
-    CommonTests test;
-
-
-    @BeforeMethod
-    void beforeMethod() throws InterruptedException {
-        this.driver = settings.useChrome();
-        test = new CommonTests(this.driver);
-    }
-
-    @AfterMethod
-    void afterMethod() {
+    @Test
+    void firstTest () {
+        var driver = chrome.create();
+        var test = new CommonTests(driver);
+        test.searchTest();
         driver.close();
     }
 
     @Test
-    void firstTest () {
-        test.searchTest();
-    }
-
-    @Test
     void secondTest () {
+        WebDriver driver = chrome.create();
+        var test = new CommonTests(driver);
         test.searchTest();
+        driver.close();
     }
     @Test
     void thirdTest ()  {
+        WebDriver driver = chrome.create();
+        var test = new CommonTests(driver);
         test.searchTest();
+        driver.close();
     }
 
 
