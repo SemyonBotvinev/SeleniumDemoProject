@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 public class BasePage {
 
     protected WebDriver driver;
-    protected String url = "";
+    protected String url;
     protected String expectedTitle;
 
     @FindBy(css = ".ui-autocomplete-input")
