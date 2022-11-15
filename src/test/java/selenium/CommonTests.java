@@ -27,6 +27,14 @@ public class CommonTests {
         houseAndGardenPage.putValueIntoSearchField("КАСТРЮЛЯ");
         searchResultsPage.sendEnterIntoSearchField();
         searchResultsPage.clickFirstProductInSearchResults();
+        houseAndGardenPage.sleep(5);
+    }
+
+    public void contactUsTest() {
+        houseAndGardenPage.go();
+        houseAndGardenPage.contactUsButtonClick();
+        houseAndGardenPage.sendKeysToContactUsTextInputArea("Привет!");
+        houseAndGardenPage.sleep(5);
     }
 
 

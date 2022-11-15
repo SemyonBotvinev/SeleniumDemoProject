@@ -15,23 +15,24 @@ public class ChromeTest {
         var driver = chrome.create();
         var test = new CommonTests(driver);
         test.searchTest();
+        test.contactUsTest();
         driver.close();
     }
 
-    @Test
-    void secondTest () {
-        WebDriver driver = chrome.create();
-        var test = new CommonTests(driver);
-        test.searchTest();
-        driver.close();
-    }
-    @Test
-    void thirdTest ()  {
-        WebDriver driver = chrome.create();
-        var test = new CommonTests(driver);
-        test.searchTest();
-        driver.close();
-    }
+//    @Test
+//    void secondTest () {
+//        WebDriver driver = chrome.create();
+//        var test = new CommonTests(driver);
+//        test.searchTest();
+//        driver.close();
+//    }
+//    @Test
+//    void thirdTest ()  {
+//        WebDriver driver = chrome.create();
+//        var test = new CommonTests(driver);
+//        test.searchTest();
+//        driver.close();
+//    }
 
 
 }
