@@ -27,7 +27,7 @@ public class CommonTests {
         houseAndGardenPage.putValueIntoSearchField("КАСТРЮЛЯ");
         searchResultsPage.sendEnterIntoSearchField();
         searchResultsPage.clickFirstProductInSearchResults();
-        houseAndGardenPage.sleep(5);
+        searchResultsPage.sleep(5);
     }
 
     public void contactUsTest() {
