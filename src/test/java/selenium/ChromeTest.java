@@ -16,6 +16,7 @@ public class ChromeTest {
         var test = new CommonTests(driver);
         test.searchTest();
         test.contactUsTest();
+        test.addToCartTest();
         driver.close();
     }
 

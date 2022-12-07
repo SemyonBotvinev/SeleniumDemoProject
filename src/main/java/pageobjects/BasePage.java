@@ -1,8 +1,10 @@
 package pageobjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.awaitility.Durations;
 
@@ -17,6 +19,8 @@ public class BasePage {
     protected String url;
     protected String expectedTitle;
 
+
+
     @FindBy(css = ".ui-autocomplete-input")
     protected WebElement searchField;
 
@@ -29,9 +33,22 @@ public class BasePage {
     @FindBy(css = ".product_list .row > div:nth-of-type(1)")
     protected WebElement firstProductInSearchResults;
 
+    @FindBy(css = ".product_list .row > div:nth-of-type(1) .leo-bt-cart-content")
+    protected WebElement firstProductInSearchResultsAddToCartButton;
+
     @FindBy(css = ".inputField_ba74")
     protected WebElement contactUsTextInputArea;
 
+
+    // селектор для ховера
+    By firstProduct = By.cssSelector(".product_list .row > div:nth-of-type(1)");
+
+    // метод для ховера на эелемент
+    public void moveCursorToElement(By by){
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(by));
+        action.build().perform();
+    }
 
     //метод для проверки перехода на нужную страницу (по заголовку)
     public void checkTitle() {
@@ -54,6 +71,11 @@ public class BasePage {
 
     public void clickFirstProductInSearchResults() {
         firstProductInSearchResults.click();
+    }
+
+    public void addFirstProductInSearchResultsToCart() {
+        moveCursorToElement(firstProduct);
+        firstProductInSearchResultsAddToCartButton.click();
     }
 
     public void contactUsButtonClick() {

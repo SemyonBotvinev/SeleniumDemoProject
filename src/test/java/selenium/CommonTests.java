@@ -37,7 +37,12 @@ public class CommonTests {
         houseAndGardenPage.sleep(5);
     }
 
-
-
+    public void addToCartTest() {
+        houseAndGardenPage.go();
+        houseAndGardenPage.putValueIntoSearchField("КАСТРЮЛЯ");
+        searchResultsPage.sendEnterIntoSearchField();
+        searchResultsPage.addFirstProductInSearchResultsToCart();
+        houseAndGardenPage.sleep(5);
+    }
 
 }
