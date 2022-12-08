@@ -14,9 +14,9 @@ public class ChromeTest {
     void firstTest () {
         var driver = chrome.create();
         var test = new CommonTests(driver);
-        test.searchTest();
-        test.contactUsTest();
-        test.addToCartTest();
+//        test.searchTest();
+//        test.contactUsTest();
+        test.addToCartAndDeleteTest();
         driver.close();
     }
 

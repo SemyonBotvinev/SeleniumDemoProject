@@ -1,6 +1,7 @@
 package selenium;
 
 import org.openqa.selenium.WebDriver;
+import pageobjects.CheckoutPage;
 import pageobjects.HouseAndGardenPage;
 import pageobjects.SearchResultsPage;
 import static org.openqa.selenium.support.PageFactory.initElements;
@@ -10,6 +11,7 @@ public class CommonTests {
     //private WebDriver driver;   - фактически, классу CommonTests драйвер не нужен. Читай след коммент.
     private HouseAndGardenPage houseAndGardenPage;
     private SearchResultsPage searchResultsPage;
+    private CheckoutPage checkoutPage;
 
 
     // здесь (в CommonTests-инстансе) один раз собираются экземпляры всех страниц и передаются в BeforeMethod,
@@ -18,6 +20,7 @@ public class CommonTests {
         //this.driver = driver;
         houseAndGardenPage = initElements(driver, HouseAndGardenPage.class);
         searchResultsPage = initElements(driver, SearchResultsPage.class);
+        checkoutPage = initElements(driver, CheckoutPage.class);
     }
 
 
@@ -37,12 +40,14 @@ public class CommonTests {
         houseAndGardenPage.sleep(5);
     }
 
-    public void addToCartTest() {
+    public void addToCartAndDeleteTest() {
         houseAndGardenPage.go();
         houseAndGardenPage.putValueIntoSearchField("КАСТРЮЛЯ");
         searchResultsPage.sendEnterIntoSearchField();
         searchResultsPage.addFirstProductInSearchResultsToCart();
-        houseAndGardenPage.sleep(5);
+        searchResultsPage.shoppingCartIconClick();
+        checkoutPage.removeFromCartIconClick();
+        checkoutPage.sleep(5);
     }
 
 }

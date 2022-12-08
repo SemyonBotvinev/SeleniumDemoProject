@@ -19,8 +19,6 @@ public class BasePage {
     protected String url;
     protected String expectedTitle;
 
-
-
     @FindBy(css = ".ui-autocomplete-input")
     protected WebElement searchField;
 
@@ -38,6 +36,9 @@ public class BasePage {
 
     @FindBy(css = ".inputField_ba74")
     protected WebElement contactUsTextInputArea;
+
+    @FindBy(css = "div.cart-content-btn  a.btn-primary[href=\"//dom-kauf.com/ru/cart?action=show\"]")
+    protected WebElement shoppingCartIcon;
 
 
     // селектор для ховера
@@ -78,9 +79,9 @@ public class BasePage {
         firstProductInSearchResultsAddToCartButton.click();
     }
 
-    public void contactUsButtonClick() {
-        contactUsButton.click();
-    }
+    public void contactUsButtonClick() {contactUsButton.click(); }
+
+    public void shoppingCartIconClick() {shoppingCartIcon.click();}
 
     public void sendKeysToContactUsTextInputArea(String keys) {contactUsTextInputArea.sendKeys(keys);}
 
